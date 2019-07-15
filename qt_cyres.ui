@@ -26,11 +26,35 @@
       <x>0</x>
       <y>0</y>
       <width>1200</width>
-      <height>760</height>
+      <height>770</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1200</width>
+      <height>770</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>770</height>
+     </size>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
      <number>1</number>
@@ -43,8 +67,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1200</width>
-       <height>682</height>
+       <width>1196</width>
+       <height>714</height>
       </rect>
      </property>
      <attribute name="label">
@@ -69,122 +93,13 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1200</width>
-       <height>682</height>
+       <width>1196</width>
+       <height>714</height>
       </rect>
      </property>
      <attribute name="label">
       <string>Data Clean</string>
      </attribute>
-     <widget class="QListWidget" name="listWidget_1">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>130</y>
-        <width>256</width>
-        <height>541</height>
-       </rect>
-      </property>
-      <property name="modelColumn">
-       <number>0</number>
-      </property>
-      <property name="currentRow">
-       <number>-1</number>
-      </property>
-     </widget>
-     <widget class="QListWidget" name="listWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>130</y>
-        <width>256</width>
-        <height>541</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_search">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>70</y>
-        <width>256</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>微软雅黑</family>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_import_1">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>10</y>
-        <width>256</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="import_Button">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>10</y>
-        <width>120</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>宋体</family>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>导入实验数据</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="input_Button">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>70</y>
-        <width>120</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>宋体</family>
-       </font>
-      </property>
-      <property name="text">
-       <string>导入数据模板</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="output_Button">
-      <property name="geometry">
-       <rect>
-        <x>546</x>
-        <y>70</y>
-        <width>120</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>宋体</family>
-       </font>
-      </property>
-      <property name="text">
-       <string>导出数据模板</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="csvexport_Button">
       <property name="geometry">
        <rect>
@@ -211,19 +126,298 @@
        <string>导出Excel</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="page_3">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>1200</width>
-       <height>682</height>
-      </rect>
-     </property>
-     <attribute name="label">
-      <string>待续</string>
-     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>521</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+	border-width:2px;
+	border-style:solid;
+	border-color: rgb(170, 170, 170);
+}</string>
+      </property>
+      <property name="title">
+       <string>文件导入</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_import_1">
+       <property name="geometry">
+        <rect>
+         <x>82</x>
+         <y>30</y>
+         <width>256</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="import_Button">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>28</y>
+         <width>120</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>导入实验数据</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>文件地址</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>311</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+	border-width:2px;
+	border-style:solid;
+	border-color: rgb(170, 170, 170);
+}</string>
+      </property>
+      <property name="title">
+       <string>试验参数</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_search">
+       <property name="geometry">
+        <rect>
+         <x>82</x>
+         <y>20</y>
+         <width>201</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="listWidget_1">
+       <property name="geometry">
+        <rect>
+         <x>28</x>
+         <y>50</y>
+         <width>256</width>
+         <height>541</height>
+        </rect>
+       </property>
+       <property name="modelColumn">
+        <number>0</number>
+       </property>
+       <property name="currentRow">
+        <number>-1</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>28</x>
+         <y>22</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>搜索</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>110</y>
+        <width>311</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+	border-width:2px;
+	border-style:solid;
+	border-color: rgb(170, 170, 170);
+}</string>
+      </property>
+      <property name="title">
+       <string>已选参数</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QListWidget" name="listWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>50</y>
+         <width>256</width>
+         <height>541</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="output_Button">
+       <property name="geometry">
+        <rect>
+         <x>166</x>
+         <y>18</y>
+         <width>120</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>宋体</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>导出数据模板</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="input_Button">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>18</y>
+         <width>120</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>宋体</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>导入数据模板</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="plot_Button">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>90</y>
+        <width>161</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>画  图</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_clean">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>270</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>783</x>
+        <y>270</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>清理的字符</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_1">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>320</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -237,7 +431,6 @@
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

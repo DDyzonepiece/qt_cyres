@@ -376,7 +376,7 @@ class PlotThread(QThread):
 							 header=0,
 							 usecols=self.num_col,
 							 encoding='utf_8',
-							 engine='pyhton',#主要是用c的话中文路径识别有些问题
+							 engine='python',#主要是用c的话中文路径识别有些问题
 							 iterator=True)
 			loop=True
 			chunkSize=5000
@@ -433,7 +433,7 @@ class MainWindow(QMainWindow):
 		self.output_Button.clicked.connect(self.output_start)
 		self.csvexport_Button.clicked.connect(self.csvexport_start)
 		self.excelexport_Button.clicked.connect(self.excelexport_start)
-		#self.plot_Button.clicked.connect(self.plot_start)
+		self.plot_Button.clicked.connect(self.plot_start)
 
 		self.listWidget_1.setSelectionMode(QAbstractItemView.ExtendedSelection)#按住CTRL可多选
 		self.listWidget_2.setSelectionMode(QAbstractItemView.ExtendedSelection)
@@ -452,7 +452,7 @@ class MainWindow(QMainWindow):
 		# self.lineplta_Button.clicked.connect(self.lineplta_start)
 		# self.linepltb_Button.clicked.connect(self.linepltb_start)
 		# self.linepltr_Button.clicked.connect(self.linepltr_start)
-		# self.checkBox_1.stateChanged.connect(self.export_change)
+		self.checkBox_1.stateChanged.connect(self.export_change)
 
 
 	#用来判断是否需要导出排序
@@ -686,22 +686,22 @@ class MainWindow(QMainWindow):
 			reply = QMessageBox.information(self,'提示','请先等导出完成')
 
 
-		def plot_start(self):
+	def plot_start(self):
 
-			if self.step_1!=True:
-				reply =QMessageBox.information(self,'提示','请先导入实验数据再画图')
+		if self.step_1!=True:
+			reply =QMessageBox.information(self,'提示','请先导入实验数据再画图')
+
+		else:
+			if len(self.widgetlist_2)>100:
+				self.reply=Ui_plotms()
+
+				self.reply.settings(self.import_filename,\
+									self.widgetlist_2,\
+									self.plot_figure)
+				self.reply.show()
 
 			else:
-				if len(self.widgetlist_2)>100:
-					self.reply=Ui_plotms()
-
-					self.reply.settings(self.import_filename,\
-										self.widgetlist_2,\
-										self.plot_figure)
-					self.reply.show()
-
-				else:
-					self.plot_figure()
+				self.plot_figure()
 
 	def plot_figure(self):
 		self.plotthread=PlotThread(self.import_filename,\
